@@ -1,0 +1,52 @@
+.foodList {
+    grid-area: 2/2/2/3;
+    background-color: #1e2c69;
+    border-radius: 1rem 5rem 1rem 1rem;
+    width: 25rem;
+    min-height: 30rem;
+    max-height: auto;
+    margin-left: 5rem;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.foodList h1 {
+    color: white;
+    justify-self: center;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.foodList ul {
+    margin: 0 0 3rem 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.foodList ul li {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border: hsl(229, 100%, 77%) 2px solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.foodList ul li button {
+    margin-top: 1rem;
+    height: 2rem;
+    width: 10rem;
+    border: hsl(229, 100%, 77%) 2px solid;
+    background-color: hsl(229, 57%, 24%);
+    color: white;
+    font-weight: 900;
+    border-radius: 0.8rem;
+    align-self: center;
+}

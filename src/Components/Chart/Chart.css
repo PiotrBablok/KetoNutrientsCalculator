@@ -1,0 +1,24 @@
+.chart {
+    grid-area: 1/1/2/3;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.nutritionalValues {
+    height: 2rem;
+}
+
+.fat {
+    background-color: blueviolet;
+}
+
+.carbo {
+    background-color: red;
+}
+
+.protein {
+    background-color: yellow;
+}
