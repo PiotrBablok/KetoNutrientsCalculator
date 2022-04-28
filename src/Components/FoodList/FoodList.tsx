@@ -17,7 +17,7 @@ function FoodList() {
 
     return (
         <div className='foodList'>
-            <h1>Added Food :)</h1>
+            <h1>Added Food</h1>
             <ul>
                 {foodList.map((food: FoodNutries) => {
                     return (
@@ -27,7 +27,7 @@ function FoodList() {
                             <p>Protein: {food.proteinConsumed}</p>
                             <p>Fat: {food.fatConsumed}</p>
                             <p>Carbohydrates: {food.carbsConsumed}</p>
-                            <button onClick={() => delDoc(food.id)}>Delete</button>
+                            <button /* onClick={() => delDoc(food.id)} */>Delete</button>
                         </li>
                     )
                 })}

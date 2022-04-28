@@ -3,13 +3,29 @@
     justify-self: flex-end;
     align-self: flex-start;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: 5rem;
-    background-color: #1e2c69;
+    margin-top: 4rem;
+    background-color: #392B58;
     width: 25rem;
-    height: 30rem;
+    height: 34rem;
     border-radius: 1rem 5rem 1rem 1rem;
+    -webkit-box-shadow: 0px 0px 24px 0px #392B58;
+    -moz-box-shadow: 0px 0px 24px 0px #392B58;
+    box-shadow: 0px 0px 24px 0px #392B58;
+}
+
+.nutriCalc h1 {
+    color: white;
+    justify-self: center;
+    align-self: center;
+    margin-top: 1rem;
+    color: white;
+    border: white 2px solid;
+    padding: 0.8rem;
+    border-radius: 1rem;
 }
 
 .nutriCalcForm {
@@ -18,7 +34,7 @@
     align-items: center;
     justify-content: center;
     width: 80%;
-    margin: 3rem 0 3rem 0;
+    margin: 1rem 0 1rem 0;
 }
 
 .nutriCalcForm label {
@@ -30,12 +46,12 @@
 }
 
 .nutriCalcForm input {
-    background-color: hsl(229, 57%, 24%);
+    background-color: white;
     width: 100%;
-    border: hsl(229, 100%, 77%) 2px solid;
+    border: #687A9D 3px solid;
     height: 2rem;
     border-radius: 0.2rem;
-    color: white;
+    color: #645E9D;
     font-size: 100%;
     font-weight: 900;
     transition: 0.5s ease-in-out;
@@ -43,7 +59,7 @@
 
 .nutriCalcForm input:focus {
     outline: none !important;
-    border: 2px solid white;
+    border: 3px solid #99D5C9;
 
 }
 
@@ -51,11 +67,20 @@
     margin-top: 1rem;
     height: 2rem;
     width: 10rem;
-    border: hsl(229, 100%, 77%) 2px solid;
-    background-color: hsl(229, 57%, 24%);
+    border: white 2px solid;
+    background-color: #645E9D;
     color: white;
     font-weight: 900;
     border-radius: 0.8rem;
+    transition: 0.2s ease-in-out;
+}
+
+.nutriCalcForm button:focus {
+    outline: 0;
+}
+
+.nutriCalcForm button:active {
+    background-color: #687A9D;
 }
 
 

@@ -1,14 +1,18 @@
 .foodList {
-    grid-area: 2/2/2/3;
-    background-color: #1e2c69;
-    border-radius: 1rem 5rem 1rem 1rem;
+    grid-area: 2/2/2/4;
+    background-color: #392B58;
+    border-radius: 5rem 1rem 1rem 1rem;
     width: 25rem;
     min-height: 30rem;
     max-height: auto;
     margin-left: 5rem;
+    margin-top: 4rem;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
+    -webkit-box-shadow: 0px 0px 24px 0px #392B58;
+    -moz-box-shadow: 0px 0px 24px 0px #392B58;
+    box-shadow: 0px 0px 24px 0px #392B58;
 }
 
 .foodList h1 {
@@ -16,6 +20,10 @@
     justify-self: center;
     align-self: center;
     margin-top: 1rem;
+    color: white;
+    border: white 2px solid;
+    padding: 0.8rem;
+    border-radius: 1rem;
 }
 
 .foodList ul {
@@ -33,7 +41,7 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    border: hsl(229, 100%, 77%) 2px solid;
+    border: #687A9D 3px solid;
     padding: 1rem;
     border-radius: 1rem;
     margin-top: 2rem;
@@ -43,10 +51,18 @@
     margin-top: 1rem;
     height: 2rem;
     width: 10rem;
-    border: hsl(229, 100%, 77%) 2px solid;
-    background-color: hsl(229, 57%, 24%);
+    border: white 2px solid;
+    background-color: #645E9D;
     color: white;
     font-weight: 900;
     border-radius: 0.8rem;
     align-self: center;
+}
+
+.foodList ul li button:focus {
+    outline: 0;
+}
+
+.foodList ul li button:active {
+    background-color: #687A9D;
 }
