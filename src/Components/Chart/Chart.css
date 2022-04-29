@@ -27,29 +27,33 @@
     justify-content: center;
 }
 
+.nutrientsVal p:nth-child(1) {
+    color: #fff;
+    font-weight: 900;
+}
+
 .percentageNutrients {
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-self: center;
-    width: 20rem;
+    width: 80%;
     align-self: flex-end;
 }
 
 .percentage {
-    color: #fff;
     font-weight: 900;
 }
 
-.percentageNutrients p:nth-child(1){
+.percentageNutrients p:nth-child(1) {
     color: #E2C044;
 }
 
-.percentageNutrients p:nth-child(2){
+.percentageNutrients p:nth-child(2) {
     color: #BFDBF7;
 }
 
-.percentageNutrients p:nth-child(3){
+.percentageNutrients p:nth-child(3) {
     color: #EF959D;
 }
 
