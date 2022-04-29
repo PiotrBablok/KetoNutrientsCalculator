@@ -1,6 +1,5 @@
 import { createContext, useReducer } from 'react';
 
-
 /* Interfaces */
 import { ContextProviderChildren } from '../Interfaces/Interfaces';
 import { InitialStateType } from '../Interfaces/Interfaces';

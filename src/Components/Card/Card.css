@@ -2,8 +2,14 @@
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: 10rem 1fr 1fr;
     justify-content: center;
     align-items: center;
+}
+
+.card button {
+    grid-area: 3/1/4/4;
+    justify-self: center;
+    align-self: center;
 }

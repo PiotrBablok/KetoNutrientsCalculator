@@ -9,3 +9,16 @@ body {
     height: 100vh;
     background-color: #645E9D;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #687A9D;
+    border-radius: 5px
+}

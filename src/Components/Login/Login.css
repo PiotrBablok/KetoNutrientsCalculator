@@ -1,0 +1,13 @@
+.loginModalHolder {
+    grid-area: 2/1/3/4;
+    align-self: flex-end;
+    justify-self: center;
+    margin-bottom: 2rem;
+}
+
+.loginModalHolder form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

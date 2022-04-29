@@ -42,11 +42,12 @@ const NutriInFood: React.FC = () => {
 
     return (
         <div className='nutriCalc'>
+            <h1>Add Portion</h1>
             <form className='nutriCalcForm'>
                 <label>Food Name</label>
                 <input onChange={(e) => { setFoodName(e.target.value) }} value={foodName} />
                 <label>Amount of food consumed (g)</label>
-                <input  type="number" onChange={(e) => { setFoodWeight(Number(e.target.value)) }} value={`${foodWeight}`}/>
+                <input type="number" onChange={(e) => { setFoodWeight(Number(e.target.value)) }} value={`${foodWeight}`} />
                 <label>Protein per 100g of food (g)</label>
                 <input type="number" onChange={(e) => { setProteinPerHundr(Number(e.target.value)) }} value={proteinPerHundr} />
                 <label>Fat per 100g of food (g)</label>

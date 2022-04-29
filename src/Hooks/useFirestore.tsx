@@ -6,10 +6,10 @@ import { timeStamp } from "../DataBase/config";
 import { FoodNutries } from "../Interfaces/Interfaces";
 
 export const useFirestore = () => {
-    function addDoc(doc: FoodNutries) {
+    async function addDoc(doc: FoodNutries) {
         try {
             const createdAt = timeStamp.fromDate(new Date());
-            projectFirestore.collection('foodData').add({ ...doc, createdAt });
+            await projectFirestore.collection('foodData').add({ ...doc, createdAt });
         } catch (error) {
             console.log(error)
         }
