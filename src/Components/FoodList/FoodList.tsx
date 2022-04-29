@@ -27,7 +27,7 @@ function FoodList() {
                             <p>Protein: {food.proteinConsumed}</p>
                             <p>Fat: {food.fatConsumed}</p>
                             <p>Carbohydrates: {food.carbsConsumed}</p>
-                            <button /* onClick={() => delDoc(food.id)} */>Delete</button>
+                            <button onClick={() => delDoc(food.id)}>Delete</button>
                         </li>
                     )
                 })}
