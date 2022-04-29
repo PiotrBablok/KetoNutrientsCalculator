@@ -13,8 +13,6 @@ function FoodList() {
     const { foodList } = useCollection('foodData');
     const { delDoc } = useFirestore();
 
-    console.log(foodList);
-
     return (
         <div className='foodList'>
             <h1>Added Food</h1>
