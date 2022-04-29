@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /* Fireastore Config */
 import { projectFirestore } from "../DataBase/config"
@@ -10,14 +10,16 @@ export const useCollection = (collectionId: string) => {
 
     useEffect(() => {
         /* Collection ref */
-        let ref = projectFirestore.collection(collectionId);
-        ref.orderBy('createdAt', 'desc');
+        let ref = projectFirestore.collection(collectionId)
+            .orderBy('createdAt', 'desc');
 
         const unsub = ref.onSnapshot(snapshot => {
             const docs = snapshot.docs.map(doc => ({
                 ...doc.data(),
                 id: doc.id
             }));
+
+            console.log(docs)
 
             setFoodList(docs);
         });
