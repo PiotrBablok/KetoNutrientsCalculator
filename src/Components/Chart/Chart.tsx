@@ -43,9 +43,9 @@ function Chart() {
 
         const totalNutrients = sumedNutriesTemp.protein + sumedNutriesTemp.fat + sumedNutriesTemp.carbo;
 
-        setProtein(Math.round(sumedNutriesTemp.protein / (totalNutrients) * 100))
-        setFat(Math.round(sumedNutriesTemp.fat / (totalNutrients) * 100))
-        setCarbo(Math.round(sumedNutriesTemp.carbo / (totalNutrients) * 100))
+        setProtein(Number(((sumedNutriesTemp.protein / totalNutrients) * 100).toFixed(2)));
+        setFat(Number(((sumedNutriesTemp.fat / totalNutrients) * 100).toFixed(2)));
+        setCarbo(Number(((sumedNutriesTemp.carbo / totalNutrients) * 100).toFixed(2)));
 
         if (foodList.length === 0) {
             setProtein(0)
