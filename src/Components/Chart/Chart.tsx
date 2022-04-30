@@ -5,6 +5,7 @@ import './Chart.css';
 
 /* Hooks */
 import { useCollection } from '../../Hooks/useCollection';
+import { useAuthContext } from '../../Hooks/useAuthContext';
 
 /* Interface */
 import { FoodNutries } from '../../Interfaces/Interfaces';
@@ -24,7 +25,8 @@ function Chart() {
     }
 
     /* Hooks */
-    const { foodList } = useCollection('foodData');
+    const { user } = useAuthContext();
+    const { foodList } = useCollection(user.uid);
 
     /* State */
     const [protein, setProtein] = useState(0);
