@@ -19,8 +19,6 @@ export const useCollection = (collectionId: string) => {
                 id: doc.id
             }));
 
-            console.log(docs)
-
             setFoodList(docs);
         });
 

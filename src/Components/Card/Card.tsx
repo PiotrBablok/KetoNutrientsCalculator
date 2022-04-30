@@ -21,8 +21,6 @@ function Card() {
     const { user, authIsReady } = useAuthContext();
     const { logout } = useAuth();
 
-    console.log(user, authIsReady);
-
     return (
         <div className='card'>
             <FoodDataContextProvider >

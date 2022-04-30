@@ -7,10 +7,12 @@ import './FoodList.css'
 /* Hooks */
 import { useCollection } from '../../Hooks/useCollection';
 import { useFirestore } from '../../Hooks/useFirestore';
+import { useAuthContext } from '../../Hooks/useAuthContext';
 
 function FoodList() {
     /* Hooks */
-    const { foodList } = useCollection('foodData');
+    const { user } = useAuthContext();
+    const { foodList } = useCollection(user.uid);
     const { delDoc } = useFirestore();
 
     return (

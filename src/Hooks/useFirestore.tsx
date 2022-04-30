@@ -5,11 +5,17 @@ import { timeStamp } from "../DataBase/config";
 /* Interfaces */
 import { FoodNutries } from "../Interfaces/Interfaces";
 
+/* Hooks */
+import { useAuthContext } from "./useAuthContext";
+
 export const useFirestore = () => {
+
+    const { user } = useAuthContext();
+
     async function addDoc(doc: FoodNutries) {
         try {
             const createdAt = timeStamp.fromDate(new Date());
-            await projectFirestore.collection('foodData').add({ ...doc, createdAt });
+            await projectFirestore.collection(user.uid).add({ ...doc, createdAt });
         } catch (error) {
             console.log(error)
         }
@@ -17,7 +23,7 @@ export const useFirestore = () => {
 
     function delDoc(id: string | undefined) {
         try {
-            projectFirestore.collection('foodData').doc(id).delete();
+            projectFirestore.collection(user.uid).doc(id).delete();
         } catch (error) {
             console.log(error)
         }

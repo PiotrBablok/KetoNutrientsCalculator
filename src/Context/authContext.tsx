@@ -8,7 +8,9 @@ import { projectAuth } from '../DataBase/config';
 
 export const AuthContext = createContext<any>(null);
 
-const authContextReducer = (state: any, action: any) => {
+console.log(AuthContext);
+
+const authContextReducer = (state: { user: null, authIsReady: boolean }, action: any) => {
     switch (action.type) {
         case 'LOGIN':
             return { ...state, user: action.payload };
@@ -21,13 +23,11 @@ const authContextReducer = (state: any, action: any) => {
     }
 }
 
-
 export const AuthContextProvider: React.FC<ContextProviderChildren> = ({ children }) => {
     const [state, dispatch] = useReducer(authContextReducer, {
         user: null,
         authIsReady: false,
     })
-
 
     useEffect(() => {
         const unsub = projectAuth.onAuthStateChanged(user => {
