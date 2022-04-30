@@ -7,11 +7,11 @@ import { useAuth } from '../../Hooks/useAuth';
 
 /* Components */
 import Login from '../Login/Login';
-import Register from '../Register/Register';
 import NutriInFood from '../NutriInFood/NutriInFood'
 import FoodList from '../FoodList/FoodList';
 import Chart from '../Chart/Chart';
 import Nav from '../Nav/Nav';
+import LogoutBtn from '../LogoutBtn/LogoutBtn';
 
 /* CSS */
 import './Card.css';
@@ -19,7 +19,7 @@ import './Card.css';
 function Card() {
 
     const { user, authIsReady } = useAuthContext();
-    const { logout } = useAuth();
+
 
     return (
         <div className='card'>
@@ -30,7 +30,6 @@ function Card() {
                         {!user &&
                             <>
                                 <Login />
-                                <Register />
                             </>
                         }
                         {user &&
@@ -38,11 +37,12 @@ function Card() {
                                 <NutriInFood />
                                 <FoodList />
                                 <Chart />
+                                <LogoutBtn />
                             </>
                         }
                     </>
                 }
-                <button onClick={() => logout()}>LOGOUT</button>
+
             </FoodDataContextProvider>
 
         </div >

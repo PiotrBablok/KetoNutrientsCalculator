@@ -1,8 +1,19 @@
 .loginModalHolder {
     grid-area: 2/1/3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     align-self: flex-end;
     justify-self: center;
     margin-bottom: 2rem;
+    background-color: #392B58;
+    border-radius: 2rem;
+    width: 20rem;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 24px 0px #392B58;
+    -moz-box-shadow: 0px 0px 24px 0px #392B58;
+    box-shadow: 0px 0px 24px 0px #392B58;
 }
 
 .loginModalHolder form {
@@ -10,4 +21,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.loginModalHolder form label {
+    margin-top: 1rem;
+    align-self: flex-start;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+
+.loginModalHolder form input {
+    background-color: white;
+    width: 100%;
+    border: #687A9D 3px solid;
+    height: 2rem;
+    border-radius: 0.5rem;
+    color: #645E9D;
+    font-size: 100%;
+    font-weight: 900;
+    transition: 0.5s ease-in-out;
+}
+
+.loginModalHolder form button {
+    margin: 0.5rem 0 0.5rem 0;
+    height: 2rem;
+    width: 10rem;
+    border: white 2px solid;
+    background-color: #645E9D;
+    color: white;
+    font-weight: 900;
+    border-radius: 0.8rem;
+    transition: 0.2s ease-in-out;
 }

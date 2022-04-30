@@ -7,7 +7,7 @@ import { useAuth } from '../../Hooks/useAuth';
 
 function Login() {
 
-    const { login } = useAuth();
+    const { login, register } = useAuth();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -29,14 +29,24 @@ function Login() {
         setPassword('');
     }
 
+    function registerHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        e.preventDefault();
+
+        register(email, password);
+
+        setEmail('');
+        setPassword('');
+    }
+
     return (
         <div className='loginModalHolder'>
             <form >
                 <label >Email</label>
                 <input type="text" onChange={emailHandler} />
                 <label >Password</label>
-                <input type="text" onChange={passwordHandler} />
+                <input type="password" onChange={passwordHandler} />
                 <button onClick={loginHandler}>Login</button>
+                <button onClick={registerHandler}>Register</button>
             </form>
         </div>
     )

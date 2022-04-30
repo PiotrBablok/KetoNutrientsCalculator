@@ -45,10 +45,13 @@ function Chart() {
 
         const totalNutrients = sumedNutriesTemp.protein + sumedNutriesTemp.fat + sumedNutriesTemp.carbo;
 
-        setProtein(Number(((sumedNutriesTemp.protein / totalNutrients) * 100).toFixed(2)));
-        setFat(Number(((sumedNutriesTemp.fat / totalNutrients) * 100).toFixed(2)));
-        setCarbo(Number(((sumedNutriesTemp.carbo / totalNutrients) * 100).toFixed(2)));
+        if (totalNutrients > 0) {
+            setProtein(Number(((sumedNutriesTemp.protein / totalNutrients) * 100).toFixed(2)));
+            setFat(Number(((sumedNutriesTemp.fat / totalNutrients) * 100).toFixed(2)));
+            setCarbo(Number(((sumedNutriesTemp.carbo / totalNutrients) * 100).toFixed(2)));
+        }
 
+        /* Reset percentage split */
         if (foodList.length === 0) {
             setProtein(0)
             setFat(0)

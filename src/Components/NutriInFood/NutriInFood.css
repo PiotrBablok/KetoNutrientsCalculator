@@ -73,6 +73,7 @@
     font-weight: 900;
     border-radius: 0.8rem;
     transition: 0.2s ease-in-out;
+    
 }
 
 .nutriCalcForm button:focus {

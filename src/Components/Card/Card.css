@@ -7,9 +7,3 @@
     justify-content: center;
     align-items: center;
 }
-
-.card button {
-    grid-area: 3/1/4/4;
-    justify-self: center;
-    align-self: center;
-}

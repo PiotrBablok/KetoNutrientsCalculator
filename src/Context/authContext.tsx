@@ -44,4 +44,3 @@ export const AuthContextProvider: React.FC<ContextProviderChildren> = ({ childre
         </AuthContext.Provider >
     )
 }
-
