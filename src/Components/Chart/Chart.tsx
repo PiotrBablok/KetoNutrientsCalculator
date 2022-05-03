@@ -66,10 +66,14 @@ function Chart() {
             <div className='sumedNutrients'>
                 <p className='sumedNutrientsVal'>Sum of:</p>
                 <div className='nutrientsVal'>
-                    <p className='sumedNutrientsVal  '><span style={{ 'color': '#E2C044' }}>Protein</span> - {sumedNutrients.protein.toFixed(2)}g |</p>
-                    <p className='sumedNutrientsVal '>&nbsp;<span style={{ 'color': '#BFDBF7' }}>Fat</span> - {sumedNutrients.fat.toFixed(2)}g |</p>
-                    <p className='sumedNutrientsVal '>&nbsp;<span style={{ 'color': '#EF959D' }}>Carbo</span> - {sumedNutrients.carbo.toFixed(2)}g</p>
+                    <p className='sumedNutrientsVal  '><span style={{ 'color': '#E2C044' }}>Protein</span> - {sumedNutrients.protein.toFixed(2)}g</p>
+                    <p className='sumedNutrientsVal '><span style={{ 'color': '#BFDBF7' }}>Fat</span> - {sumedNutrients.fat.toFixed(2)}g</p>
+                    <p className='sumedNutrientsVal '><span style={{ 'color': '#EF959D' }}>Carbo</span> - {sumedNutrients.carbo.toFixed(2)}g</p>
                 </div>
+            </div>
+            <div className='calories'>
+                <p className='sumedNutrientsVal'>Sum of calories:</p>
+                <p className='sumedNutrientsVal'>{(Number(sumedNutrients.fat.toFixed(2)) * 9) + (Number(sumedNutrients.protein.toFixed(2)) * 4) + (Number(sumedNutrients.carbo.toFixed(2)) * 4)} kCal</p>
             </div>
             <div className='percentageNutrients'>
                 <p className='percentage'>Protein - {protein}%</p>
