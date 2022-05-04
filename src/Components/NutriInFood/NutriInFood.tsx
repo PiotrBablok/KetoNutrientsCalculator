@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 /* Custom Hooks */
-import { NutritionalCalc } from '../../Hooks/useNutritionalCalc';
 import { useFirestore } from '../../Hooks/useFirestore';
 
 /* CSS */
@@ -10,7 +9,7 @@ import './NutriInFood.css';
 const NutriInFood: React.FC = () => {
 
     /* Custom Hooks */
-    const { calcNutriFood } = NutritionalCalc();
+
     const { addDoc } = useFirestore();
 
     /* State */
@@ -25,12 +24,12 @@ const NutriInFood: React.FC = () => {
 
         if (foodWeight + carbPerHundr + fatPerHundr + proteinPerHundr !== 0 && foodName !== '') {
             addDoc({
-                foodName,
                 consumedFoodWeight: foodWeight,
-                proteinConsumed: calcNutriFood(proteinPerHundr, foodWeight),
-                fatConsumed: calcNutriFood(fatPerHundr, foodWeight),
-                carbsConsumed: calcNutriFood(carbPerHundr, foodWeight),
-            })
+                foodName,
+                proteinConsumed: proteinPerHundr,
+                fatConsumed: fatPerHundr,
+                carbsConsumed: carbPerHundr,
+            }, true)
         }
 
         setFoodName('');

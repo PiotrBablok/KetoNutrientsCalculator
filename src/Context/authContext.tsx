@@ -8,8 +8,6 @@ import { projectAuth } from '../DataBase/config';
 
 export const AuthContext = createContext<any>(null);
 
-console.log(AuthContext);
-
 const authContextReducer = (state: { user: null, authIsReady: boolean }, action: any) => {
     switch (action.type) {
         case 'LOGIN':

@@ -3,7 +3,7 @@ export const NutritionalCalc = () => {
 
         const num = (wholeProductWeight * nutriPerHundret) / productWeightHundret;
 
-        return Math.round(num * 100) / 100;
+        return Number(((num * 100) / 100).toFixed(2));
     }
 
     return { calcNutriFood }

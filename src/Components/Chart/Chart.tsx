@@ -6,9 +6,11 @@ import './Chart.css';
 /* Hooks */
 import { useCollection } from '../../Hooks/useCollection';
 import { useAuthContext } from '../../Hooks/useAuthContext';
+import { NutritionalCalc } from '../../Hooks/useNutritionalCalc';
 
 /* Interface */
 import { FoodNutries } from '../../Interfaces/Interfaces';
+
 
 interface SumedNutrients {
     protein: number;
@@ -25,6 +27,7 @@ function Chart() {
     }
 
     /* Hooks */
+    const { calcNutriFood } = NutritionalCalc();
     const { user } = useAuthContext();
     const { foodList } = useCollection(user.uid);
 
@@ -38,9 +41,9 @@ function Chart() {
     useEffect(() => {
 
         foodList.forEach((food: FoodNutries) => {
-            sumedNutriesTemp.carbo += food.carbsConsumed;
-            sumedNutriesTemp.fat += food.fatConsumed;
-            sumedNutriesTemp.protein += food.proteinConsumed;
+            sumedNutriesTemp.carbo += calcNutriFood(food.carbsConsumed,food.consumedFoodWeight);
+            sumedNutriesTemp.fat +=  calcNutriFood(food.fatConsumed,food.consumedFoodWeight);
+            sumedNutriesTemp.protein +=  calcNutriFood(food.proteinConsumed,food.consumedFoodWeight);
         })
 
         const totalNutrients = sumedNutriesTemp.protein + sumedNutriesTemp.fat + sumedNutriesTemp.carbo;
@@ -73,7 +76,7 @@ function Chart() {
             </div>
             <div className='calories'>
                 <p className='sumedNutrientsVal'>Sum of calories:</p>
-                <p className='sumedNutrientsVal'>{(Number(sumedNutrients.fat.toFixed(2)) * 9) + (Number(sumedNutrients.protein.toFixed(2)) * 4) + (Number(sumedNutrients.carbo.toFixed(2)) * 4)} kCal</p>
+                <p className='sumedNutrientsVal'>{((sumedNutrients.fat * 9) + (sumedNutrients.protein * 4) + (sumedNutrients.carbo * 4)).toFixed(2)} kCal</p>
             </div>
             <div className='percentageNutrients'>
                 <p className='percentage'>Protein - {protein}%</p>
