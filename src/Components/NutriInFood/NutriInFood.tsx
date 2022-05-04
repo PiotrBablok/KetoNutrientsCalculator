@@ -26,9 +26,9 @@ const NutriInFood: React.FC = () => {
             addDoc({
                 consumedFoodWeight: foodWeight,
                 foodName,
-                proteinConsumed: proteinPerHundr,
-                fatConsumed: fatPerHundr,
-                carbsConsumed: carbPerHundr,
+                proteinPerHundr: proteinPerHundr,
+                fatPerHundr: fatPerHundr,
+                carbsPerHundr: carbPerHundr,
             }, true)
         }
 

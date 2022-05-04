@@ -14,22 +14,22 @@ function FoodList() {
     /* Hooks */
     const { calcNutriFood } = NutritionalCalc();
     const { user } = useAuthContext();
-    const { foodList } = useCollection(user.uid);
+    const { foodList } = useCollection(user.uid, 'consumedFood');
     const { delDoc } = useFirestore();
 
     return (
         <div className='foodList'>
             <h1>Added Food</h1>
             <ul>
-                {foodList.map((food: any) => {
+                {foodList.map((food: FoodNutries) => {
                     return (
                         <li key={food.createdAt.seconds}>
                             <p>Food: {food.foodName}</p>
                             <p>In the <b>{food.consumedFoodWeight}g</b> of <b>{food.foodName}</b> you ate, you will find:</p>
-                            <p>Protein: {calcNutriFood(food.proteinConsumed, food.consumedFoodWeight)}</p>
-                            <p>Fat: {calcNutriFood(food.fatConsumed, food.consumedFoodWeight)}</p>
-                            <p>Carbohydrates: {calcNutriFood(food.carbsConsumed, food.consumedFoodWeight)}</p>
-                            <button onClick={() => delDoc(food.createdAt.seconds)}>Delete</button>
+                            <p>Protein: {calcNutriFood(food.proteinPerHundr, food.consumedFoodWeight)}</p>
+                            <p>Fat: {calcNutriFood(food.fatPerHundr, food.consumedFoodWeight)}</p>
+                            <p>Carbohydrates: {calcNutriFood(food.carbsPerHundr, food.consumedFoodWeight)}</p>
+                            <button onClick={() => delDoc(food.createdAt.seconds, 'consumedFood')}>Delete</button>
                         </li>
                     )
                 })}

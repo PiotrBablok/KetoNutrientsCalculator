@@ -29,7 +29,7 @@ function Chart() {
     /* Hooks */
     const { calcNutriFood } = NutritionalCalc();
     const { user } = useAuthContext();
-    const { foodList } = useCollection(user.uid);
+    const { foodList } = useCollection(user.uid, 'consumedFood');
 
     /* State */
     const [protein, setProtein] = useState(0);
@@ -41,9 +41,9 @@ function Chart() {
     useEffect(() => {
 
         foodList.forEach((food: FoodNutries) => {
-            sumedNutriesTemp.carbo += calcNutriFood(food.carbsConsumed,food.consumedFoodWeight);
-            sumedNutriesTemp.fat +=  calcNutriFood(food.fatConsumed,food.consumedFoodWeight);
-            sumedNutriesTemp.protein +=  calcNutriFood(food.proteinConsumed,food.consumedFoodWeight);
+            sumedNutriesTemp.carbo += calcNutriFood(food.carbsPerHundr, food.consumedFoodWeight);
+            sumedNutriesTemp.fat += calcNutriFood(food.fatPerHundr, food.consumedFoodWeight);
+            sumedNutriesTemp.protein += calcNutriFood(food.proteinPerHundr, food.consumedFoodWeight);
         })
 
         const totalNutrients = sumedNutriesTemp.protein + sumedNutriesTemp.fat + sumedNutriesTemp.carbo;

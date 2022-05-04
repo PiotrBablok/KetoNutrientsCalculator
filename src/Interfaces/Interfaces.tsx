@@ -10,10 +10,11 @@ export interface ActionType {
 export interface FoodNutries {
     foodName: string;
     consumedFoodWeight: number;
-    proteinConsumed: number;
-    fatConsumed: number;
-    carbsConsumed: number;
-    id?: string;
+    proteinPerHundr: number;
+    fatPerHundr: number;
+    carbsPerHundr: number;
+    id: string;
+    createdAt: { seconds: string };
 }
 
 export interface ContextProviderChildren {

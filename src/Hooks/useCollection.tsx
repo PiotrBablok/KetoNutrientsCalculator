@@ -1,11 +1,10 @@
-import { constants } from 'buffer';
 import firebase from 'firebase/compat/app';
 import { useEffect, useRef, useState } from "react";
 
 /* Fireastore Config */
 import { projectFirestore } from "../DataBase/config"
 
-export const useCollection = (collectionId: string) => {
+export const useCollection = (collectionId: string, docName: string) => {
 
     /* State */
     const [foodList, setFoodList] = useState<any>([]);
@@ -29,7 +28,7 @@ export const useCollection = (collectionId: string) => {
         /* .orderBy('createdAt', 'desc'); */
 
         /* Get expenses by collection name */
-        ref = ref.where(firebase.firestore.FieldPath.documentId(), 'in', ['consumedFood']);
+        ref = ref.where(firebase.firestore.FieldPath.documentId(), 'in', [docName]);
 
 
         const unsub = ref.onSnapshot((snapshot: any) => {

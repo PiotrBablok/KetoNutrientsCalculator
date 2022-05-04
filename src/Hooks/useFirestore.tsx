@@ -15,7 +15,7 @@ export const useFirestore = () => {
 
     const ref = projectFirestore.collection(user.uid)
 
-    async function addDoc(doc: FoodNutries, newFood: boolean) {
+    async function addDoc(doc: Partial<FoodNutries>, newFood: boolean) {
         if (newFood) {
             try {
                 const createdAt = timeStamp.fromDate(new Date());
@@ -38,18 +38,18 @@ export const useFirestore = () => {
         }
 
         if (!newFood) {
-            try {
-                const createdAt = timeStamp.fromDate(new Date());
-                await projectFirestore.collection(user.uid).add({ ...doc, createdAt });
-            } catch (error) {
-                console.log(error)
-            }
+            const createdAt = timeStamp.fromDate(new Date());
+            await ref.doc('consumedFood').set({
+                [`${createdAt.seconds}`]: {
+                    ...doc, createdAt
+                }
+            }, { merge: true });
         }
     }
 
-    function delDoc(id: string | undefined) {
+    function delDoc(id: string, docName: string) {
         try {
-            ref.doc('consumedFood').set({ [`${id}`]: firebase.firestore.FieldValue.delete() }
+            ref.doc(docName).set({ [`${id}`]: firebase.firestore.FieldValue.delete() }
                 , { merge: true })
         } catch (error) {
             console.log(error)

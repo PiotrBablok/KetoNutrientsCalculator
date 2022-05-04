@@ -12,6 +12,7 @@ import FoodList from '../FoodList/FoodList';
 import Chart from '../Chart/Chart';
 import Nav from '../Nav/Nav';
 import LogoutBtn from '../LogoutBtn/LogoutBtn';
+import FoodHistory from '../FoodHistory/FoodHistory';
 
 /* CSS */
 import './Card.css';
@@ -37,6 +38,7 @@ function Card() {
                                 <NutriInFood />
                                 <FoodList />
                                 <Chart />
+                                <FoodHistory />
                                 <LogoutBtn />
                             </>
                         }
