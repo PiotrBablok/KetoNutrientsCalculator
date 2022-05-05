@@ -20,3 +20,9 @@ export interface FoodNutries {
 export interface ContextProviderChildren {
     children?: React.ReactNode;
 }
+
+export interface ReaddModalProps {
+    oponCloseModal: boolean;
+    modalHandlerFunc: (reAddFood: Partial<FoodNutries>, openClose: boolean) => void;
+    addAgain: Partial<FoodNutries>;
+}

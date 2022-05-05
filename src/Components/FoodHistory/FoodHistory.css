@@ -2,7 +2,7 @@
     grid-area: 3/2/4/3;
     background-color: #392B58;
     border-radius: 5rem 1rem 1rem 1rem;
-    width: 25rem;
+    max-width: 25rem;
     height: 34rem;
     margin-left: 5rem;
     margin-top: 4rem;
@@ -13,6 +13,11 @@
     -moz-box-shadow: 0px 0px 24px 0px #392B58;
     box-shadow: 0px 0px 24px 0px #392B58;
     overflow: auto;
+}
+
+.foodHistory::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
 }
 
 .foodHistory h1 {
@@ -26,6 +31,33 @@
     border-radius: 1rem;
 }
 
+/* Search bar <from> */
+.searchBarForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+}
+
+.searchBarForm input {
+    background-color: white;
+    width: 70%;
+    border: #687A9D 3px solid;
+    height: 2rem;
+    border-radius: 0.2rem;
+    color: #645E9D;
+    font-size: 100%;
+    font-weight: 900;
+    transition: 0.5s ease-in-out;
+}
+
+.searchBarForm input:focus {
+    outline: none !important;
+    border: 3px solid #99D5C9;
+}
+
+/* Food history <ul> */
 .foodHistory ul {
     margin: 0 0 3rem 0;
     list-style: none;
@@ -120,7 +152,6 @@
 .addModalForm input:focus {
     outline: none !important;
     border: 3px solid #99D5C9;
-
 }
 
 .addModalForm button {
