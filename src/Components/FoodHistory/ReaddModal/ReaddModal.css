@@ -1,0 +1,72 @@
+/* Add Modal */
+.addModal {
+    grid-area: 5/1/6/2;
+    background-color: #392B58;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 15rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 24px 0px #392B58;
+    -moz-box-shadow: 0px 0px 24px 0px #392B58;
+    box-shadow: 0px 0px 24px 0px #392B58;
+}
+
+.addModalForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 1rem 0 1rem 0;
+}
+
+.addModalForm label {
+    margin-top: 1rem;
+    align-self: flex-start;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+
+.addModalForm input {
+    background-color: white;
+    width: 100%;
+    border: #687A9D 3px solid;
+    height: 2rem;
+    border-radius: 0.2rem;
+    color: #645E9D;
+    font-size: 100%;
+    font-weight: 900;
+    transition: 0.5s ease-in-out;
+}
+
+.addModalForm input:focus {
+    outline: none !important;
+    border: 3px solid #99D5C9;
+}
+
+.addModalForm button {
+    margin-top: 1rem;
+    height: 2rem;
+    width: 10rem;
+    border: white 2px solid;
+    background-color: #645E9D;
+    color: white;
+    font-weight: 900;
+    border-radius: 0.8rem;
+    transition: 0.2s ease-in-out;
+}
+
+.addModalForm button:focus {
+    outline: 0;
+}
+
+.addModalForm button:active {
+    background-color: #687A9D;
+}

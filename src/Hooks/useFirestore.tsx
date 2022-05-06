@@ -1,5 +1,6 @@
 /* Fireastore Config */
 import firebase from 'firebase/compat/app';
+import { useEffect, useState } from 'react';
 import { projectFirestore } from "../DataBase/config"
 import { timeStamp } from "../DataBase/config";
 
@@ -11,7 +12,11 @@ import { useAuthContext } from "./useAuthContext";
 
 export const useFirestore = () => {
 
+    /* Hooks */
     const { user } = useAuthContext();
+
+    /* State */
+    const [isCancelled, setIsCancelled] = useState(false);
 
     const ref = projectFirestore.collection(user.uid)
 
@@ -55,6 +60,11 @@ export const useFirestore = () => {
             console.log(error)
         }
     }
+
+    useEffect(() => {
+        return () => setIsCancelled(true);
+    }, []);
+
 
     return { addDoc, delDoc }
 }

@@ -36,10 +36,10 @@ function Card() {
                         {user &&
                             <>
                                 <NutriInFood />
-                                <FoodList />
+                                 <LogoutBtn />
                                 <Chart />
+                                <FoodList />
                                 <FoodHistory />
-                                <LogoutBtn />
                             </>
                         }
                     </>

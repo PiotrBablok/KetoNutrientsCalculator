@@ -1,13 +1,13 @@
 .foodList {
-    grid-area: 2/2/2/4;
+    grid-area: 4/1/5/2;
     background-color: #392B58;
-    border-radius: 5rem 1rem 1rem 1rem;
-    width: 25rem;
+    border-radius: 2rem;
+    width: 20rem;
     height: 34rem;
-    margin-left: 5rem;
     margin-top: 4rem;
-    align-self: flex-start;
     display: flex;
+    align-self: center;
+    justify-self: center;
     flex-direction: column;
     -webkit-box-shadow: 0px 0px 24px 0px #392B58;
     -moz-box-shadow: 0px 0px 24px 0px #392B58;
