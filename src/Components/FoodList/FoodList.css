@@ -43,7 +43,7 @@
 
 .foodList ul li {
     color: white;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     width: 18rem;
     height: auto;
