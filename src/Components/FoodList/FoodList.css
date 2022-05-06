@@ -12,7 +12,7 @@
     -webkit-box-shadow: 0px 0px 24px 0px #392B58;
     -moz-box-shadow: 0px 0px 24px 0px #392B58;
     box-shadow: 0px 0px 24px 0px #392B58;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .foodList::-webkit-scrollbar {
@@ -43,10 +43,9 @@
 
 .foodList ul li {
     color: white;
-    display: inline-block;
+    display: flex;
     flex-direction: column;
-    width: 18rem;
-    height: auto;
+    width: 80%;
     border: #687A9D 3px solid;
     padding: 1rem;
     border-radius: 1rem;
