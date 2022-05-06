@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/KetoNutrientsCalculator/static/css/main.aa88b91d.css",
+    "main.css": "/KetoNutrientsCalculator/static/css/main.0f06b807.css",
     "main.js": "/KetoNutrientsCalculator/static/js/main.51ca4639.js",
     "index.html": "/KetoNutrientsCalculator/index.html",
-    "main.aa88b91d.css.map": "/KetoNutrientsCalculator/static/css/main.aa88b91d.css.map",
+    "main.0f06b807.css.map": "/KetoNutrientsCalculator/static/css/main.0f06b807.css.map",
     "main.51ca4639.js.map": "/KetoNutrientsCalculator/static/js/main.51ca4639.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa88b91d.css",
+    "static/css/main.0f06b807.css",
     "static/js/main.51ca4639.js"
   ]
 }
